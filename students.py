@@ -24,4 +24,9 @@ class Student:
         return self.__courseCode
     
 students=[]
-def add(self, student)
+def add(Student):
+    students.append(Student)
+
+#%%
+
+add(Student("12345678","John Doe","1234567"))
