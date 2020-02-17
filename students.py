@@ -28,11 +28,9 @@ def add(Student):
     students.append(Student)
 
 def retrieve():
-    lowestNumber = "99999999"
-    for student in students:
-        if student.getStudentNumber() <  lowestNumber:
-            lowestNumber = student.getStudentNumber()
-    print(lowestNumber)
+    lowest = sorted(students,key=lambda x:x.getStudentNumber())[0]
+    print(lowest.getStudentNumber())
+    students.remove(lowest)
 #%%
 
 add(Student("12345678","John Doe","1234567"))
